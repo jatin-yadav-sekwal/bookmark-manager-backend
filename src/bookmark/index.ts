@@ -4,7 +4,7 @@ import { db } from "../db";
 import { Bookmark, Catogory, Users } from "../db/schema";
 import { eq, and } from "drizzle-orm";
 
-const bookmark = new Elysia({ prefix: "/user" });
+export const bookmark = new Elysia({ prefix: "/user" });
 
 bookmark.use(jwtPlugin).use(cookiePlugin);
 
@@ -486,5 +486,4 @@ bookmark.delete(
     }
 )
 
-bookmark.listen(3000);
-console.log("😾 connected to port 3000 ");
+

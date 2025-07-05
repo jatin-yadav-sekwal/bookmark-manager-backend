@@ -8,7 +8,7 @@ import { eq } from "drizzle-orm";
 // }
 // checkEmail();
 
-const auth = new Elysia({ prefix: "/user" });
+export const auth = new Elysia({ prefix: "/user" });
 
 auth.use(jwtPlugin);
 auth.use(cookiePlugin);
@@ -126,5 +126,3 @@ auth.post(
   }
 );
 
-auth.listen(3000);
-console.log(`server started at 3000`);
